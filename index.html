@@ -1,77 +1,102 @@
-<!doctype html>
-<html lang="en" id="top">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Kishore Nayak</title>
-  <meta name="description" content="Personal landing page for Kishore Nayak." />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" type="image/svg+xml" href="fevicon.png">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'primary-dark': '#0A0A0A',
+            'accent': '#6366F1',
+            'accent-light': '#8B5CF6',
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    .social-btn {
+      width: 60px;
+      height: 60px;
+      background-color: #1F2937;
+      border-radius: 1rem;
+      border: 2px solid #4F46E5;
+      transition: all 0.3s ease;
+    }
+
+    .social-btn:hover {
+      background: linear-gradient(135deg, #6366F1, #8B5CF6);
+      transform: scale(1.08);
+      box-shadow: 0 0 15px #6366F180;
+    }
+  </style>
 </head>
-<body>
-  <header class="site-header" role="banner">
-    <nav class="nav" aria-label="Primary">
-      <a class="brand" href="#top" aria-label="Home">KN</a>
-      <button id="themeToggle" class="theme-toggle" aria-label="Toggle dark theme" type="button">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
-        </svg>
-      </button>
-    </nav>
-  </header>
 
-  <main>
-    <section class="hero" aria-label="Intro">
-      <div class="photo-wrap">
-        <img src="photo.jpg" alt="Portrait of Kishore Nayak" class="photo" />
-      </div>
-      <h1 class="title">Kishore Nayak</h1>
-      <p class="subtitle">Software Developer • Cybersecurity Enthusiast • Linux User</p>
+<!-- Changed from font-mono → font-sans -->
+<body class="bg-primary-dark text-white min-h-screen flex flex-col justify-center items-center p-6 font-sans">
 
-      <div class="socials" aria-label="Social links">
-        <a class="icon" href="mailto:mail@kishorenayak.com" aria-label="Email">
-          <svg viewBox="0 0 24 24" width="22" height="22" role="img" aria-hidden="true">
-            <path fill="currentColor" d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Zm0 4-8 5L4 8V6l8 5 8-5z"/>
-          </svg>
-        </a>
-        <a class="icon" href="https://github.com/sudokishore" target="_blank" rel="noopener" aria-label="GitHub">
-          <svg viewBox="0 0 24 24" width="22" height="22" role="img" aria-hidden="true">
-            <path fill="currentColor" d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48 0-.24-.01-.87-.01-1.71-2.78.6-3.37-1.18-3.37-1.18-.45-1.14-1.1-1.45-1.1-1.45-.9-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.89 1.52 2.34 1.08 2.91.83.09-.65.35-1.08.64-1.33-2.22-.25-4.56-1.11-4.56-4.95 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.64 0 0 .84-.27 2.75 1.02a9.56 9.56 0 0 1 5 0c1.9-1.29 2.74-1.02 2.74-1.02.56 1.37.21 2.39.11 2.64.64.7 1.03 1.59 1.03 2.68 0 3.85-2.34 4.7-4.57 4.95.36.31.68.92.68 1.86 0 1.34-.01 2.41-.01 2.74 0 .26.18.58.69.48A10 10 0 0 0 12 2z"/>
-          </svg>
-        </a>
-        <a class="icon" href="https://linkedin.com/in/kishorenayak2004" target="_blank" rel="noopener" aria-label="LinkedIn">
-          <svg viewBox="0 0 24 24" width="22" height="22" role="img" aria-hidden="true">
-            <path fill="currentColor" d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.13 1.45-2.13 2.95v5.65H9.35V9h3.42v1.56h.05c.48-.9 1.65-1.85 3.4-1.85 3.63 0 4.3 2.39 4.3 5.49v6.25zM5.34 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14zM7.12 20.45H3.57V9h3.55v11.45z"/>
-          </svg>
-        </a>
-      </div>
+  <main class="w-full max-w-sm md:max-w-md text-center">
 
-      <div class="cta">
-        <a class="btn" href="#about">About</a>
-        <a class="btn" href="#contact">Contact</a>
-      </div>
-    </section>
+    <!-- Profile Photo -->
+    <div class="mb-6">
+      <img id="profile-photo"
+        class="w-60 h-60 object-cover rounded-full mx-auto border-4 border-accent shadow-[0_0_20px_#6366F155] transition-all hover:scale-105"
+        src="photo.jpg"
+        alt="Profile Photo of the user"
+        onerror="this.onerror=null; this.src='https://placehold.co/400x400/9CA3AF/ffffff?text=Photo+Missing';"
+      >
+    </div>
 
-    <section id="about" class="section" aria-label="About">
-      <h2>About</h2>
-      <p>I am a 3rd year CSE student from VSSUT Burla, having interest in Linux, open source, and programming. I am deeply fascinated by the entire Linux ecosystem, from system administration on distributions like Arch Linux to the potential of cross-platform development. My curiosity also extends into cybersecurity and ethical hacking concepts. I am focused on building a strong foundation in these areas and am eager to apply my learning. My goal is to grow my skills and eventually contribute to meaningful and innovative open-source projects as I continue my journey in technology.</p>
-    </section>
+    <h1 class="text-4xl font-extrabold mb-6">Kishore Nayak</h1>
 
-    <section id="contact" class="section" aria-label="Contact">
-      <h2>Contact</h2>
-      <p>
-        <a class="btn email-neutral" href="mailto:mail@kishorenayak.com" rel="noopener">Email: mail@kishorenayak.com</a>
-      </p>
-    </section>
+    <!-- Social Buttons -->
+    <div class="flex justify-center space-x-3 mb-10">
+      <a href="mailto:iam.kishore.nayak@gmail.com" target="_blank" class="social-btn flex items-center justify-center" aria-label="Email">
+        <i data-lucide="mail" class="w-6 h-6"></i>
+      </a>
+
+      <a href="https://linkedin.com/in/kishorenayak2004" target="_blank" class="social-btn flex items-center justify-center" aria-label="LinkedIn">
+        <i data-lucide="linkedin" class="w-6 h-6"></i>
+      </a>
+
+      <a href="https://github.com/sudokishore" target="_blank" class="social-btn flex items-center justify-center" aria-label="GitHub">
+        <i data-lucide="github" class="w-6 h-6"></i>
+      </a>
+
+      <a href="https://twitter.com/kishorenayak47" target="_blank" class="social-btn flex items-center justify-center" aria-label="Twitter/X">
+        <i data-lucide="twitter" class="w-6 h-6"></i>
+      </a>
+    </div>
+
+    <!-- Navigation Buttons -->
+    <div class="flex flex-col space-y-3">
+      
+      <!-- About Button -->
+      <a href="about.html"
+        class="w-full py-3 text-lg font-semibold text-primary-dark bg-gradient-to-r from-indigo-500 to-violet-500 rounded-2xl shadow-lg transition-all hover:scale-[1.03] hover:shadow-[0_0_20px_#6366F1aa] active:scale-[0.97] focus:outline-none focus:ring-4 focus:ring-indigo-400/40"
+        aria-label="Go to About page">
+        About Me
+      </a>
+
+      <!-- Projects Button -->
+      <a href="projects.html"
+        class="w-full py-3 text-lg font-semibold border-2 border-indigo-500 text-indigo-400 rounded-2xl transition-all hover:bg-indigo-500 hover:text-primary-dark hover:scale-[1.03] hover:shadow-[0_0_15px_#6366F199] active:scale-[0.97] focus:outline-none focus:ring-4 focus:ring-indigo-400/40"
+        aria-label="Go to Projects page">
+        My Projects
+      </a>
+    </div>
   </main>
 
-  <footer class="site-footer" role="contentinfo">
-    <p>© <span id="year"></span> Kishore Nayak</p>
-  </footer>
-
-  <script src="script.js"></script>
+  <script>
+    lucide.createIcons();
+  </script>
 </body>
 </html>
-
