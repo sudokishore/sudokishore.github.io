@@ -1,102 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Kishore Nayak</title>
-  <link rel="icon" type="image/svg+xml" href="fevicon.png">
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script src="https://unpkg.com/lucide@latest"></script>
-
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            'primary-dark': '#0A0A0A',
-            'accent': '#6366F1',
-            'accent-light': '#8B5CF6',
-          }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    
+    <link rel="icon" type="image/png" href="fevicon.png">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --bg: #0d1117;
+            --accent: #58a6ff;
+            --text-main: #c9d1d9;
+            --text-dim: #8b949e;
         }
-      }
-    }
-  </script>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            background-color: var(--bg);
+            color: var(--text-main);
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+        .container { 
+            max-width: 600px; 
+            width: 100%;
+            padding: 40px 20px; 
+            text-align: center;
+        }
+        
+        .profile-img {
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid var(--accent);
+            margin: 0 auto 25px auto;
+            display: block;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+        }
 
-  <style>
-    .social-btn {
-      width: 60px;
-      height: 60px;
-      background-color: #1F2937;
-      border-radius: 1rem;
-      border: 2px solid #4F46E5;
-      transition: all 0.3s ease;
-    }
+        h1 { font-size: 2.5rem; margin: 10px 0; color: #fff; }
+        .tagline { color: var(--accent); font-weight: 500; font-size: 1.1rem; margin-bottom: 5px; }
+        
+        .email-text { 
+            display: block;
+            color: var(--text-dim);
+            font-size: 0.95rem;
+            text-decoration: none;
+            margin-bottom: 25px;
+            transition: 0.3s;
+        }
+        .email-text:hover { color: var(--accent); }
+        
+        .social-links { margin-bottom: 35px; }
+        .social-links a { 
+            color: var(--text-main); 
+            margin: 0 18px; 
+            font-size: 1.8rem; 
+            text-decoration: none; 
+            transition: 0.3s ease; 
+            display: inline-block;
+        }
+        .social-links a:hover { color: var(--accent); transform: translateY(-3px); }
 
-    .social-btn:hover {
-      background: linear-gradient(135deg, #6366F1, #8B5CF6);
-      transform: scale(1.08);
-      box-shadow: 0 0 15px #6366F180;
-    }
-  </style>
+        .about-text {
+            font-size: 1.1rem;
+            color: var(--text-dim);
+            line-height: 1.6;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+    </style>
 </head>
+<body>
 
-<!-- Changed from font-mono → font-sans -->
-<body class="bg-primary-dark text-white min-h-screen flex flex-col justify-center items-center p-6 font-sans">
-
-  <main class="w-full max-w-sm md:max-w-md text-center">
-
-    <!-- Profile Photo -->
-    <div class="mb-6">
-      <img id="profile-photo"
-        class="w-60 h-60 object-cover rounded-full mx-auto border-4 border-accent shadow-[0_0_20px_#6366F155] transition-all hover:scale-105"
-        src="photo.jpg"
-        alt="Profile Photo of the user"
-        onerror="this.onerror=null; this.src='https://placehold.co/400x400/9CA3AF/ffffff?text=Photo+Missing';"
-      >
+<div class="container">
+    <img src="photo.jpg" alt="Profile Picture" class="profile-img">
+    
+    <h1>Kishore Nayak</h1>
+    <p class="tagline">Developer & Systems Enthusiast</p>
+    
+    <div class="social-links">
+        <a href="https://github.com/sudokishore" target="_blank" rel="noopener noreferrer" title="GitHub"><i class="fab fa-github"></i></a>
+        <a href="https://linkedin.com/in/kishoreone" target="_blank" rel="noopener noreferrer" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        <a href="mailto:mail@kishorenayak.com" target="_blank" rel="noopener noreferrer" title="Email"><i class="fas fa-envelope"></i></a>
     </div>
 
-    <h1 class="text-4xl font-extrabold mb-6">Kishore Nayak</h1>
-
-    <!-- Social Buttons -->
-    <div class="flex justify-center space-x-3 mb-10">
-      <a href="mailto:iam.kishore.nayak@gmail.com" target="_blank" class="social-btn flex items-center justify-center" aria-label="Email">
-        <i data-lucide="mail" class="w-6 h-6"></i>
-      </a>
-
-      <a href="https://linkedin.com/in/kishorenayak2004" target="_blank" class="social-btn flex items-center justify-center" aria-label="LinkedIn">
-        <i data-lucide="linkedin" class="w-6 h-6"></i>
-      </a>
-
-      <a href="https://github.com/sudokishore" target="_blank" class="social-btn flex items-center justify-center" aria-label="GitHub">
-        <i data-lucide="github" class="w-6 h-6"></i>
-      </a>
-
-      <a href="https://twitter.com/kishorenayak47" target="_blank" class="social-btn flex items-center justify-center" aria-label="Twitter/X">
-        <i data-lucide="twitter" class="w-6 h-6"></i>
-      </a>
+    <div class="about-text">
+        I am a developer interested in <strong>Data Structures & Algorithms (DSA)</strong>, exploring low-level systems like <strong>Linux</strong>, and building modern <strong>Web Development</strong> projects.
     </div>
+</div>
 
-    <!-- Navigation Buttons -->
-    <div class="flex flex-col space-y-3">
-      
-      <!-- About Button -->
-      <a href="about.html"
-        class="w-full py-3 text-lg font-semibold text-primary-dark bg-gradient-to-r from-indigo-500 to-violet-500 rounded-2xl shadow-lg transition-all hover:scale-[1.03] hover:shadow-[0_0_20px_#6366F1aa] active:scale-[0.97] focus:outline-none focus:ring-4 focus:ring-indigo-400/40"
-        aria-label="Go to About page">
-        About Me
-      </a>
-
-      <!-- Projects Button -->
-      <a href="projects.html"
-        class="w-full py-3 text-lg font-semibold border-2 border-indigo-500 text-indigo-400 rounded-2xl transition-all hover:bg-indigo-500 hover:text-primary-dark hover:scale-[1.03] hover:shadow-[0_0_15px_#6366F199] active:scale-[0.97] focus:outline-none focus:ring-4 focus:ring-indigo-400/40"
-        aria-label="Go to Projects page">
-        My Projects
-      </a>
-    </div>
-  </main>
-
-  <script>
-    lucide.createIcons();
-  </script>
 </body>
 </html>
